@@ -110,11 +110,21 @@ for(var i = 0; i < names.length; i++){
 console.log('sob teke soto:', min, 'er-length', min.length);
 console.log('sob teke boto:', max, 'er-length', max.length);
 
-
-
-
-
-
-
+// with function 
+// onek koster sadhona
+// array min problem solve  
+function tinyFriend(names){
+    var min = names[0];
+    for(var i = 0; i < names.length; i++){
+        var element = names[i];
+        if( element.length < min.length && element != " "){
+            min = element;
+        }
+    }
+    return min;
+}
+var minNumber = ['kawsar', 'kaium',  'enamul', 'shahanaouj', " ", 'tumi', 'ami'];
+var result = tinyFriend(minNumber);
+console.log('sob teke soto:', result, 'er-length', result.length);
 
 
