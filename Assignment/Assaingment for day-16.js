@@ -65,27 +65,54 @@ brickCalculator2(25);
 function brickCalculator(floor){
     if(floor > 0 && floor <= 10 ){
         floor = floor*15;
-        return floor;
+        // return floor;
     }
     else if(floor > 10 && floor <= 20 ){
         floor = floor*12  +30;
-        return floor;
+        // return floor;
     }
     else if(floor >= 21){
         floor = floor*10  +50 +20; //valo kore hisab kor kana
-        return floor;
+        // return floor;
     }
     else if(floor == 0){
         console.log("Floor would not be 0. Write a valid number.");
-        return 0;
+        // return 0;
     }
     else{
         console.log('Worning! Floor would not be negative.')
+        return 0;
     }
+    return floor;
 }
-var floor = 50;
+var floor = 0;
 var result = brickCalculator(floor)*1000;
 console.log(floor, "Floor =", result,  "Bricks needs.");
+
+// 03-system animal calculator 
+function animalCalculetor(depth){
+    var animal = 0;
+    if ( depth <= 10){
+        animal = depth * 50;
+    }
+    else if(depth <= 20){
+        var firstPart = 10 * 50;
+        var remaining = depth - 10;
+        var secondPart = remaining * 100;
+        animal = firstPart + secondPart;
+    }
+    else{
+        var firstPart = 10 * 50;
+        var secondPart = 10 * 100;
+        var remaining = depth - 20;
+        var thirdPart = remaining * 300;
+        animal = firstPart + secondPart + thirdPart;
+    }
+    return animal;
+}
+var count = animalCalculetor(22);
+console.log('Your result:', count);
+
 
 
 
@@ -123,8 +150,10 @@ function tinyFriend(names){
     }
     return min;
 }
-var minNumber = ['kawsar', 'kaium',  'enamul', 'shahanaouj', " ", 'tumi', 'ami'];
+var minNumber = ['kawsar', 'kaium',  'enamul', 'shahanaouj', "  ", 'tumi', 'ami'];
 var result = tinyFriend(minNumber);
 console.log('sob teke soto:', result, 'er-length', result.length);
+
+
 
 
