@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event management Company</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">Exploring Events</h1>
+    <button id="second">Click here-2</button>
+    <button id="third">Click here-3</button>
+    <button id="forth">Click here-4</button>
+
+    <script>
+        // 1st way
+        function handleClick(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        const secondButton = document.getElementById('second');
+        secondButton.onclick = handleClick ; // () hobe na. function set korte hobe call kra jabe na
+ 
+
+        //  2nd way
+        function handleClick2(){
+            document.body.style.backgroundColor = 'pink';
+        }
+        const thirdButton = document.getElementById('third');
+        thirdButton.addEventListener('click', handleClick2);//onclick hoy na
+        
+
+        //  3nd way
+        document.getElementById('forth').addEventListener('click', function(){ //function otoba function er num o bebohar kora jabe
+            document.body.style.backgroundColor = 'orange';
+        });
+
+    </script>
+</body>
+</html>
