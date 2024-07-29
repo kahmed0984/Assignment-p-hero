@@ -86,15 +86,16 @@ var result= fact(5);
 console.log(result);
 
 // without recursuveway
-function factorial(num){
+function fact(num){
     var fact = 1;
     for ( var i = 1; i<= num; i++){
         fact = fact * i;
     }
     return fact;
 }
-var result = factorial(6);
+var result = fact(6);
 console.log("Result = ", result);
+
 // recursive way
 function factorialRecursive(num){
     if ( num == 1){

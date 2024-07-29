@@ -3,7 +3,7 @@
 function feetToMile(feet){
     if(feet > 0){
         var mile = feet/5280;
-        return mile;
+        return mile.toFixed(3);
     }
     else{
         console.log('Worning! Feet would not be negative.')
@@ -12,8 +12,7 @@ function feetToMile(feet){
 }
 var feet = 42244;
 var result = feetToMile(feet);
-var finalResult = result.toFixed(3);
-console.log( feet, "Feet =" ,finalResult , "Miles");
+console.log( feet, "Feet =" ,result , "Miles");
 
 
 

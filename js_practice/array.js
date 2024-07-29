@@ -29,7 +29,7 @@ console.log(friendsAge);
 
 
 //slice array teke  kisu ongso kete nay and pura array okkhoto teke jay
-var friendsName = ['kawsar', 'kaium', 'enamul', 'rifat', 'enay', 'sagor'];
+var friendsName = ['kawsar', 'kaium', 'enamul', 'rifat', 'enay', 'sagor']; //what is this i dont understand
 var friends = friendsName.slice(3, 5);//kisu kete nay and pura thik thake
 console.log(friends);
 console.log(friendsName);
