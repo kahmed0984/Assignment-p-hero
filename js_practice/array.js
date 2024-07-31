@@ -29,9 +29,10 @@ console.log(friendsAge);
 
 
 //slice array teke  kisu ongso kete nay and pura array okkhoto teke jay
-var friendsName = ['kawsar', 'kaium', 'enamul', 'rifat', 'enay', 'sagor'];
-var friends = friendsName.slice(3, 5);//kisu kete nay and pura thik thake
+var friendsName = ['kawsar', 'kaium', 'enamul', 'rifat', 'enay', 'sagor']; //what is this i dont understand
+var friends = friendsName.slice(2, -1);//kisu kete nay and pura thik thake
+console.log(friendsName);
 console.log(friends);
+var friends = friendsName.splice(-4, 2, 'hamim', 'ramim', 200);//permanent vabe kete nay
 console.log(friendsName);
-var friends = friendsName.splice(3, 5);//permanent vabe kete nay
-console.log(friendsName);
+console.log(friends);

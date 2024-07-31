@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id="first" >Lorem, ipsum dolor.</li>
+            <li >Quibusdam, saepe dolores!</li>
+            <li >Eum, deserunt ducimus!</li>
+            <li >Id, dolorum ipsum.</li>
+            <li >Explicabo, vero voluptatum.</li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <h1>by for loop</h1>
+        <ul id="ourList">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Quibusdam, saepe dolores!</li>
+            <li class="item">Eum, deserunt ducimus!</li>
+            <li class="item">Id, dolorum ipsum.</li>
+            <li class="item">Explicabo, vero voluptatum.</li>
+        </ul>
+        <button id="addNew">Add new items</button>
+    </div>
+    <script>   
+    document.getElementById('first').addEventListener('click', function(){
+        console.log('first item clicked');
+    });
+    document.getElementById('myList').addEventListener('click', function(){
+        console.log('Ul clicked');
+        event.stopPropagation(); // oy porjonto ase teme jabe
+        // event.stopImmediatePropagation(); //asepase ja ase oy gulake o
+    });
+    document.getElementById('container').addEventListener('click', function(){
+        console.log('Container clicked');
+    });
+
+
+
+
+
+// jayta click korbo sey ta show hobe sudu
+    // var items = document.getElementsByClassName('item');
+    // for (let i = 0; i < items.length; i++) {
+    //     const item = items[i];
+    //     // console.log(item)
+    //     item.addEventListener('click', function(event){ // event hosse peramitar
+    //         console.log(this, event.target);
+    //         console.log(event.target.innerText, event.target.parentNode);
+    //         event.target.parentNode.removeChild(event.target); //important
+
+    //     });
+    // }
+
+
+    document.getElementById('addNew').addEventListener('click', function(event){
+        var itemParent = document.getElementById('ourList');
+        var newItem = document.createElement('li');
+        newItem.innerHTML = 'Brand new Item';
+        itemParent.appendChild(newItem);
+    })
+
+
+
+    document.getElementById('ourList').addEventListener('click', function(event){
+        console.log(this, event.target);
+        event.target.parentNode.removeChild(event.target);
+    });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+
+    <style>
+        article{
+            border:2px solid green;
+            border-radius: 15px;
+            margin:10px 100px;
+            padding:10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+            <h3>Exploring DOM</h3>
+            <article>
+                <h3>Article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero natus molestiae neque aliquam dicta amet asperiores praesentium voluptates hic. Laborum excepturi inventore iusto quidem! Illum quia corrupti aliquam totam?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Dignissimos autem facere nihil aliquid, voluptas eligendi architecto id, nulla beatae harum, dicta odit numquam saepe inventore nisi veniam repellendus cupiditate laudantium aperiam. Eligendi animi, reprehenderit sapiente harum iusto ipsam?</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Consectetur nostrum nis laudantium. Sint nesciunt quo ipsa aspernatur vero eaque iure adipisci deleniti quod, debitis porro expedita! Aspernatur ducimus voluptate quia illum doloremque dolores perspiciatis commodi nemo facilis amet?</p>
+            </article>
+        </section>
+    </main>
+
+
+
+    
+
+
+
+    <script>
+        document.body.style.backgroundColor = 'pink';
+        var authors = document.getElementsByClassName('author');
+        for(var i = 0; i< authors.length; i++){
+            var element = authors[i];
+            console.log(element);
+            console.log(element.innerHTML);
+            element.innerHTML = 'After change byclassname ............Admin-' + (i + 1);
+
+            element.style.backgroundColor = 'lightblue';
+            element.style.border = '1px solid red';
+        };
+
+
+        // doing by queryselector   .... sobgulo class dorbe
+        var authors = document.querySelectorAll('.special h3');
+        for(var i = 0; i < authors.length; i++){
+            var element = authors[i];
+            element.innerHTML = 'After change by queryselector ............Administration-' + (i + 1);
+            element.style.color = 'red';
+        };
+        // shudu prothom class ta dorbe
+        var design = document.querySelector('.special h3');
+        design.style.backgroundColor = 'green';
+        document.querySelector('h3').setAttribute('title', 'this is Our title');
+    </script>
+</body>
+</html>

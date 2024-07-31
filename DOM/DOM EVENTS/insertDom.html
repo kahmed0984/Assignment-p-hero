@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+
+    <style>
+        article{
+            border:2px solid green;
+            border-radius: 15px;
+            margin:10px 100px;
+            padding:10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+            <h3>Exploring DOM</h3>
+            <article id="first_article">
+                <h3>Article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero natus molestiae neque aliquam dicta amet asperiores praesentium voluptates hic. Laborum excepturi inventore iusto quidem! Illum quia corrupti aliquam totam?</p>
+            </article> 
+            <article >
+                <h3>Grocery List</h3>
+                <ul id="gift_list">
+                    <li>Gift item -1</li>
+                    <li>Gift item -2</li>
+                    <li>Gift item -3</li>
+                    <li>Gift item -4</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    
+
+
+
+    <script>
+        // kono article js diya add kora
+        const article = document.getElementById('first_article') ;
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by JavaScript.';
+        // age bosbe
+        // article.prepend(newParagraph);
+        // vitore bosbe
+        article.appendChild(newParagraph);
+        newParagraph.style.backgroundColor = 'pink';
+
+
+
+        // add one more gift items
+        const ul = document.getElementById('gift_list');
+        const li = document.createElement('li');
+        li.innerHTML = 'Brand new gift for you';
+        ul.appendChild(li);
+        //for understanding somthing
+        li.style.color = 'green';
+        li.style.backgroundColor = 'pink';
+
+
+
+        // nodes use to 
+        var node = document.getElementById('first_article').childNodes;
+        console.log(node);
+        var node = document.getElementById('gift_list').parentNode;
+        console.log(node);
+
+
+    </script>
+</body>
+</html>
