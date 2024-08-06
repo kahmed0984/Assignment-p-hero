@@ -15,3 +15,5 @@ function add(num1, num2 = 20 ){ // es6 method 03
 }
 const total = add(15);//ekta input kom dile
 console.log(total);
+const total2 = add(15, 35);
+console.log(total2);
