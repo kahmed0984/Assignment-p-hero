@@ -13,6 +13,20 @@ else{
 
 
 
+
+
+let num = 0;
+if(num || num == 0){
+    console.log('contition is true');
+}
+else{
+    console.log('contition is false');
+}
+
+
+
+
+
 let name = NaN ;
 console.log(name);
 if(name){
@@ -21,3 +35,6 @@ if(name){
 else{
     console.log('contition is false');
 }
+
+
+
